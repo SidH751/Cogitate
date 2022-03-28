@@ -1,3 +1,4 @@
+
 package com.example.loginlogin;
 
 import androidx.annotation.NonNull;
@@ -21,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText emailTextView, passwordTextView;
     Button loginButton;
     FirebaseAuth mAuth;
-    TextInputLayout l1, l2;
+    TextInputLayout l1, l2; //comment
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
