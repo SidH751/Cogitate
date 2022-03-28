@@ -22,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     Button loginButton;
     FirebaseAuth mAuth; //comment
     TextInputLayout l1, l2;//comment2
+    //comment3
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
