@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
     EditText emailTextView, passwordTextView;
     Button loginButton;
-    FirebaseAuth mAuth;
+    FirebaseAuth mAuth; //comment
     TextInputLayout l1, l2;
 
     @Override
