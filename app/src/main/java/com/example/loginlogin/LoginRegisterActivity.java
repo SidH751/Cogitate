@@ -27,13 +27,9 @@ public class LoginRegisterActivity extends AppCompatActivity {
         firstLoginBtn = findViewById(R.id.loginFirstScreen);
         firstRegisterBtn = findViewById(R.id.registerFirstScreen);
 
-        firstRegisterBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginRegisterActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
-        });
+        firstRegisterBtn.setOnClickListener((p)->{ Intent intent = new Intent(LoginRegisterActivity.this, RegisterActivity.class);
+            startActivity(intent);});
+        
         firstLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
