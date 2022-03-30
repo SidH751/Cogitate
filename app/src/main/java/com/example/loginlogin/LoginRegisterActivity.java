@@ -27,16 +27,16 @@ public class LoginRegisterActivity extends AppCompatActivity {
         firstLoginBtn = findViewById(R.id.loginFirstScreen);
         firstRegisterBtn = findViewById(R.id.registerFirstScreen);
 
-        firstRegisterBtn.setOnClickListener((p)->{ Intent intent = new Intent(LoginRegisterActivity.this, RegisterActivity.class);
-            startActivity(intent);});
+        //Lambda functions used
+        firstRegisterBtn.setOnClickListener(
+                (p)->{ Intent intent = new Intent(LoginRegisterActivity.this, RegisterActivity.class);
+            startActivity(intent);}
+        );
         
-        firstLoginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginRegisterActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
+        firstLoginBtn.setOnClickListener(
+                (p)->{Intent intent = new Intent(LoginRegisterActivity.this, LoginActivity.class);
+            startActivity(intent);}
+        );
 
         final View content = findViewById(android.R.id.content);
         content.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
