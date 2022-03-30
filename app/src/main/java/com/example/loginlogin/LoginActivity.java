@@ -20,9 +20,9 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
     EditText emailTextView, passwordTextView;
     Button loginButton;
-    FirebaseAuth mAuth; //comment
-    TextInputLayout l1, l2;//comment2
-    //comment3
+    FirebaseAuth mAuth;
+    TextInputLayout l1, l2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordTextView = findViewById(R.id.password);
         loginButton = findViewById(R.id.loginButton);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loginUserAccount();
-            }
-        });
+        loginButton.setOnClickListener(view -> loginUserAccount());
     }
 
     void loginUserAccount(){
@@ -62,25 +57,22 @@ public class LoginActivity extends AppCompatActivity {
 
             //Firebase Authentication
             mAuth.signInWithEmailAndPassword(emailString, passwordString)
-                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isSuccessful()){
-                                Toast.makeText(getApplicationContext(),
-                                        "Login successful!!",
-                                        Toast.LENGTH_LONG)
-                                        .show();
+                    .addOnCompleteListener((task) -> {
+                        if(task.isSuccessful()){
+                            Toast.makeText(getApplicationContext(),
+                                    "Login successful!!",
+                                    Toast.LENGTH_LONG)
+                                    .show();
 
-                                Intent intent
-                                        = new Intent(LoginActivity.this,
-                                        LandingPage.class);
-                                startActivity(intent);
-                            } else {
-                                Toast.makeText(getApplicationContext(),
-                                        "Login failed!!",
-                                        Toast.LENGTH_LONG)
-                                        .show();
-                            }
+                            Intent intent
+                                    = new Intent(LoginActivity.this,
+                                    LandingPage.class);
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(getApplicationContext(),
+                                    "Login failed!!",
+                                    Toast.LENGTH_LONG)
+                                    .show();
                         }
                     });
         }
