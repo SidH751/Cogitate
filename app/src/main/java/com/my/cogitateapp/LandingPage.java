@@ -1,7 +1,4 @@
-package com.example.loginlogin;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.splashscreen.SplashScreen;
+package com.my.cogitateapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +7,12 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 
-public class LoginRegisterActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.splashscreen.SplashScreen;
+
+import com.my.cogitateapp.R;
+
+public class LandingPage extends AppCompatActivity {
 
     Button firstRegisterBtn;
     Button firstLoginBtn;
@@ -29,12 +31,12 @@ public class LoginRegisterActivity extends AppCompatActivity {
 
         //Lambda functions used
         firstRegisterBtn.setOnClickListener(
-                (p)->{ Intent intent = new Intent(LoginRegisterActivity.this, RegisterActivity.class);
+                (p)->{ Intent intent = new Intent(LandingPage.this, RegisterActivity.class);
             startActivity(intent);}
         );
         
         firstLoginBtn.setOnClickListener(
-                (p)->{Intent intent = new Intent(LoginRegisterActivity.this, LoginActivity.class);
+                (p)->{Intent intent = new Intent(LandingPage.this, LoginActivity.class);
             startActivity(intent);}
         );
 
