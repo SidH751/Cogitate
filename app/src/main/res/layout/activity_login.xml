@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".LoginActivity"
+    tools:context="com.my.cogitateapp.LoginActivity"
     android:padding="16dp">
 
     <TextView

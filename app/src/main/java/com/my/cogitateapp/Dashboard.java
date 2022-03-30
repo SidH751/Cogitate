@@ -1,10 +1,12 @@
-package com.example.loginlogin;
+package com.my.cogitateapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class LandingPage extends AppCompatActivity {
+import com.my.cogitateapp.R;
+
+public class Dashboard extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
