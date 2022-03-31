@@ -1,2 +1,2 @@
 # Cogitate
-##Relax, Focus and Meditate
+## Relax, Focus and Meditate
