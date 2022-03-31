@@ -93,7 +93,8 @@
                     android:layout_below="@id/focusC1"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="4dp"
-                    android:text="Meditate with zero interruptions" />
+                    android:text="Meditate with zero interruptions!"
+                    />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
