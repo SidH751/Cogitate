@@ -10,7 +10,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
 
-import com.my.cogitateapp.R;
+//import com.my.cogitateapp.R;
 
 public class LandingPage extends AppCompatActivity {
 
