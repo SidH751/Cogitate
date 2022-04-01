@@ -34,14 +34,14 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            app:cardCornerRadius="20dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="16dp"
             android:layout_marginTop="20dp"
             app:cardElevation="0dp">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#94D1FF"
+                android:background="@drawable/gradient_4"
                 android:padding="10dp">
 
                 <TextView
@@ -67,25 +67,25 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            app:cardCornerRadius="20dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="16dp"
             android:layout_marginTop="16dp"
             app:cardElevation="0dp">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#B987FF"
+                android:background="@drawable/gradient"
                 android:padding="10dp">
 
                 <TextView
                     android:id="@+id/focusC1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
                     android:text="Focus Mode"
                     android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -101,7 +101,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="100dp"
             app:cardCornerRadius="16dp"
             android:layout_marginTop="16dp"
             app:cardElevation="0dp"
@@ -109,7 +109,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FE9595"
+                android:background="@drawable/gradient_2"
                 android:padding="10dp">
 
                 <TextView
@@ -134,27 +134,28 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            app:cardCornerRadius="20dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="20dp"
             app:cardElevation="0dp"
             >
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FFCB64"
+                android:background="@drawable/gradient_3"
                 android:padding="10dp">
 
                 <TextView
                     android:id="@+id/levelsC1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
                     android:text="Levels"
                     android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
