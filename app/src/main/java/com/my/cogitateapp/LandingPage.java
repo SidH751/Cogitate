@@ -31,13 +31,13 @@ public class LandingPage extends AppCompatActivity {
 
         //Lambda functions used
         firstRegisterBtn.setOnClickListener(
-                (p)->{ Intent intent = new Intent(LandingPage.this, RegisterActivity.class);
+                (p) -> { Intent intent = new Intent(LandingPage.this, RegisterActivity.class);
             startActivity(intent);}
         );
         
         firstLoginBtn.setOnClickListener(
-                (p)->{Intent intent = new Intent(LandingPage.this, LoginActivity.class);
-            startActivity(intent);}
+                (p) -> { Intent intent = new Intent(LandingPage.this, LoginActivity.class);
+            startActivity(intent); }
         );
 
         final View content = findViewById(android.R.id.content);
@@ -54,11 +54,6 @@ public class LandingPage extends AppCompatActivity {
     }
 
     private void showContentAfterSomeTime() {
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                showContent = true;
-            }
-        }, 1500);
+        new Handler().postDelayed(() -> showContent = true, 1500);
     }
 }
