@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginLogin">
         <activity
+
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
