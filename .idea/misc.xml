@@ -4,14 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/drawable/gradient.xml" value="0.175" />
+        <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_forgot_password.xml" value="0.24375" />
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_landing_page.xml" value="0.264" />
-        <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/Cogitate/app/src/main/res/layout/activity_forgot_password.xml" value="0.23645833333333333" />
-        <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/Cogitate/app/src/main/res/layout/activity_login.xml" value="0.23645833333333333" />
+        <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_login.xml" value="0.24375" />
+        <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_login_register.xml" value="0.24375" />
         <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/LoginLogin/app/src/main/res/layout/activity_landing_page.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/LoginLogin/app/src/main/res/layout/activity_login.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/LoginLogin/app/src/main/res/layout/activity_login_register.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/LoginLogin/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
-        <entry key="..\:/Users/RAJ/Desktop/PBL/Cogitate/app/src/main/res/layout/activity_forgot_password.xml" value="0.19882246376811594" />
       </map>
     </option>
   </component>

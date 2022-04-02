@@ -67,6 +67,7 @@
             android:layout_height="wrap_content"
             android:text="Forgot Password?"
             android:id="@+id/forgotPwd"
+            android:textColor="@color/BtnPrimary"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
