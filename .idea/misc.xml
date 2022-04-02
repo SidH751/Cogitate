@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/Cogitate/app/src/main/res/layout/activity_landing_page.xml" value="0.23645833333333333" />
+=======
+        <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/drawable/gradient.xml" value="0.175" />
+        <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_landing_page.xml" value="0.264" />
+>>>>>>> 7c54acac37c47ff42bd72b27c05bf88defd9a6d9
         <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/LoginLogin/app/src/main/res/layout/activity_landing_page.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/LoginLogin/app/src/main/res/layout/activity_login.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/LoginLogin/app/src/main/res/layout/activity_login_register.xml" value="0.23645833333333333" />
