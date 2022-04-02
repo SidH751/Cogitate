@@ -1,7 +1,4 @@
-package com.example.loginlogin;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.splashscreen.SplashScreen;
+package com.my.cogitateapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +7,12 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 
-public class LoginRegisterActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.splashscreen.SplashScreen;
+
+import com.my.cogitateapp.R;
+
+public class LandingPage extends AppCompatActivity {
 
     Button firstRegisterBtn;
     Button firstLoginBtn;
@@ -27,20 +29,16 @@ public class LoginRegisterActivity extends AppCompatActivity {
         firstLoginBtn = findViewById(R.id.loginFirstScreen);
         firstRegisterBtn = findViewById(R.id.registerFirstScreen);
 
-        firstRegisterBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginRegisterActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
-        });
-        firstLoginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginRegisterActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
+        //Lambda functions used
+        firstRegisterBtn.setOnClickListener(
+                (p) -> { Intent intent = new Intent(LandingPage.this, RegisterActivity.class);
+            startActivity(intent);}
+        );
+        
+        firstLoginBtn.setOnClickListener(
+                (p) -> { Intent intent = new Intent(LandingPage.this, LoginActivity.class);
+            startActivity(intent); }
+        );
 
         final View content = findViewById(android.R.id.content);
         content.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
@@ -56,11 +54,6 @@ public class LoginRegisterActivity extends AppCompatActivity {
     }
 
     private void showContentAfterSomeTime() {
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                showContent = true;
-            }
-        }, 1500);
+        new Handler().postDelayed(() -> showContent = true, 1500);
     }
 }
