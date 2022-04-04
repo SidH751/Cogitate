@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginLogin">
         <activity
+            android:name=".LevelsPage"
+            android:exported="false" />
+        <activity
+            android:name=".ZenPlayer"
+            android:exported="false" />
+        <activity
+            android:name=".FocusMode"
+            android:exported="false" />
+        <activity
+            android:name=".StandardMode"
+            android:exported="false" />
+        <activity
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity

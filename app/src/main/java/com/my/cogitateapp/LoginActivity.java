@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -15,9 +17,11 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     EditText emailTextView, passwordTextView;
+    TextView forgotPass;
     Button loginButton;
     FirebaseAuth mAuth;
     TextInputLayout l1, l2;
+    Intent i;
 
 
     @Override
@@ -31,9 +35,20 @@ public class LoginActivity extends AppCompatActivity {
         emailTextView = findViewById(R.id.email);
         passwordTextView = findViewById(R.id.password);
         loginButton = findViewById(R.id.loginButton);
+        forgotPass = findViewById(R.id.forgotPwd);
+
 
         loginButton.setOnClickListener(view -> loginUserAccount());
+        forgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                i=new Intent(LoginActivity.this,ForgotPassword.class);
+                startActivity(i);
+            }
+        });
     }
+
+
 
     void loginUserAccount(){
         l1 = findViewById(R.id.emaillayout);
