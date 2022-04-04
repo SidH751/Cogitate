@@ -10,11 +10,17 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class LandingPage extends AppCompatActivity {
 
     Button firstRegisterBtn;
     Button firstLoginBtn;
     boolean showContent = false;
+
+    FirebaseUser currentuser;
+    FirebaseAuth mAuth;
 
 
 
@@ -56,6 +62,16 @@ public class LandingPage extends AppCompatActivity {
                 return false;
             }
         });
+
+
+
+        mAuth=FirebaseAuth.getInstance();
+        currentuser=mAuth.getCurrentUser();
+        if(currentuser!=null){
+            Intent i=new Intent(LandingPage.this,Dashboard.class);
+            startActivity(i);
+            this.finish();
+        }
 
 
 
