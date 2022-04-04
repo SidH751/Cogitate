@@ -69,6 +69,7 @@
             android:id="@+id/forgotPwd"
             android:textColor="@color/BtnPrimary"
             />
+
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -80,5 +81,12 @@
         android:id="@+id/loginButton"
         android:text="Login"
         android:backgroundTint="@color/BtnPrimary"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember me"
+        android:layout_gravity="right"
+        android:id="@+id/remember"
+        />
 
 </LinearLayout>

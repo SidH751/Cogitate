@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.my.cogitateapp.R;
 
 public class LandingPage extends AppCompatActivity {
@@ -17,6 +18,8 @@ public class LandingPage extends AppCompatActivity {
     Button firstRegisterBtn;
     Button firstLoginBtn;
     boolean showContent = false;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,9 @@ public class LandingPage extends AppCompatActivity {
         firstLoginBtn = findViewById(R.id.loginFirstScreen);
         firstRegisterBtn = findViewById(R.id.registerFirstScreen);
 
+
+
+
         //Lambda functions used
         firstRegisterBtn.setOnClickListener(
                 (p) -> { Intent intent = new Intent(LandingPage.this, RegisterActivity.class);
@@ -36,8 +42,10 @@ public class LandingPage extends AppCompatActivity {
         );
         
         firstLoginBtn.setOnClickListener(
-                (p) -> { Intent intent = new Intent(LandingPage.this, LoginActivity.class);
-            startActivity(intent); }
+               (p) -> {
+                   Intent intent = new Intent(LandingPage.this, LoginActivity.class);
+            startActivity(intent);
+                }
         );
 
         final View content = findViewById(android.R.id.content);
@@ -51,7 +59,12 @@ public class LandingPage extends AppCompatActivity {
                 return false;
             }
         });
+
+
+
     }
+
+
 
     private void showContentAfterSomeTime() {
         new Handler().postDelayed(() -> showContent = true, 1500);
