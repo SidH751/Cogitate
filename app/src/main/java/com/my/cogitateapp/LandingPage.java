@@ -18,6 +18,8 @@ public class LandingPage extends AppCompatActivity {
     Button firstLoginBtn;
     boolean showContent = false;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -29,6 +31,9 @@ public class LandingPage extends AppCompatActivity {
         firstLoginBtn = findViewById(R.id.loginFirstScreen);
         firstRegisterBtn = findViewById(R.id.registerFirstScreen);
 
+
+
+
         //Lambda functions used
         firstRegisterBtn.setOnClickListener(
                 (p) -> { Intent intent = new Intent(LandingPage.this, RegisterActivity.class);
@@ -36,8 +41,10 @@ public class LandingPage extends AppCompatActivity {
         );
         
         firstLoginBtn.setOnClickListener(
-                (p) -> { Intent intent = new Intent(LandingPage.this, LoginActivity.class);
-            startActivity(intent); }
+               (p) -> {
+                   Intent intent = new Intent(LandingPage.this, LoginActivity.class);
+            startActivity(intent);
+                }
         );
 
         final View content = findViewById(android.R.id.content);
