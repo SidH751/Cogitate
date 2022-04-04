@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
             emailTextView.setText(loginPreferences.getString("email",""));
             passwordTextView.setText(loginPreferences.getString("password",""));
             rememberMe.setChecked(true);
-            
+
 
         }
 
