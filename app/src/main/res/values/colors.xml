@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="BtnPrimary">#5d5cff</color>
+    <color name = "ToolBarColor">#f2F5FA</color>
 </resources>
