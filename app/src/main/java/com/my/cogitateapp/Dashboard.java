@@ -8,19 +8,15 @@ import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.my.cogitateapp.R;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     CardView newSession, focusMode, levels, zenPlayer;
@@ -34,7 +30,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_landing_page);
+        setContentView(R.layout.activity_dashboard);
         newSession = findViewById(R.id.newSessionCard);
         focusMode = findViewById(R.id.focusModeCard);
         levels = findViewById(R.id.levelsCard);
