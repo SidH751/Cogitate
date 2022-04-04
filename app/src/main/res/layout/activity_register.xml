@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.my.cogitateapp.RegisterActivity"
+    tools:context="com.my.cogitateapp.authenticator.RegisterActivity"
     android:padding="16dp"
 
 

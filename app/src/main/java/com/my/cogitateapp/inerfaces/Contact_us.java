@@ -1,14 +1,16 @@
-package com.my.cogitateapp;
+package com.my.cogitateapp.inerfaces;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ZenPlayer extends AppCompatActivity {
+import com.my.cogitateapp.R;
+
+public class Contact_us extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_zen_player);
+        setContentView(R.layout.activity_contact_us);
     }
 }

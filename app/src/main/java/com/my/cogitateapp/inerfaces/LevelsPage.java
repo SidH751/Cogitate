@@ -1,14 +1,16 @@
-package com.my.cogitateapp;
+package com.my.cogitateapp.inerfaces;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Contact_us extends AppCompatActivity {
+import com.my.cogitateapp.R;
+
+public class LevelsPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_us);
+        setContentView(R.layout.activity_levels_page);
     }
 }

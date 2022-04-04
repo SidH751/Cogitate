@@ -1,14 +1,16 @@
-package com.my.cogitateapp;
+package com.my.cogitateapp.inerfaces;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class LevelsPage extends AppCompatActivity {
+import com.my.cogitateapp.R;
+
+public class StandardMode extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_levels_page);
+        setContentView(R.layout.activity_standard_mode);
     }
 }

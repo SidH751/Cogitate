@@ -1,14 +1,16 @@
-package com.my.cogitateapp;
+package com.my.cogitateapp.inerfaces;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class FocusMode extends AppCompatActivity {
+import com.my.cogitateapp.R;
+
+public class setting_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_focus_mode);
+        setContentView(R.layout.activity_setting);
     }
 }

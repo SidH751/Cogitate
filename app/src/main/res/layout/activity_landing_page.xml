@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.my.cogitateapp.LandingPage"
+    tools:context="com.my.cogitateapp.inerfaces.LandingPage"
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
@@ -20,8 +20,6 @@
         android:textSize="40dp"
         android:fontFamily="@font/nexa_bold"
         android:textColor="@color/BtnPrimary"/>
-
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="300dp"
@@ -44,8 +42,6 @@
         android:layout_height="wrap_content"
         android:text="You have a treasure within you that is infinitely greater than anything the world can offer."
         />
-
-
     <Button
         android:layout_marginTop="24dp"
         android:layout_width="match_parent"
@@ -55,9 +51,7 @@
         android:id="@+id/registerFirstScreen"
         android:backgroundTint="#5d5cff"
         android:textColor="@color/white"
-
         />
-
     <Button
         android:layout_marginTop="0dp"
         android:layout_width="match_parent"
@@ -68,5 +62,4 @@
         android:backgroundTint="#54535C"
         android:textColor="@color/white"
         />
-
 </LinearLayout>

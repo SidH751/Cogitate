@@ -1,4 +1,4 @@
-package com.my.cogitateapp;
+package com.my.cogitateapp.authenticator;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
+import com.my.cogitateapp.R;
 
 public class ForgotPassword extends AppCompatActivity {
 
@@ -29,7 +30,7 @@ public class ForgotPassword extends AppCompatActivity {
         submitForgot = findViewById(R.id.submitForgotButton);
         backLogin=findViewById(R.id.backToLogin);
         backLogin.setOnClickListener(
-                view -> startActivity(new Intent(ForgotPassword.this,LoginActivity.class)));
+                view -> startActivity(new Intent(ForgotPassword.this, LoginActivity.class)));
 
         submitForgot.setOnClickListener(view -> validateData());
     }

@@ -1,4 +1,4 @@
-package com.my.cogitateapp;
+package com.my.cogitateapp.authenticator;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.my.cogitateapp.R;
 
 public class RegisterActivity extends AppCompatActivity {
 
