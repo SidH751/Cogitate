@@ -3,13 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/Cogitate/app/src/main/res/layout/activity_landing_page.xml" value="0.23645833333333333" />
-=======
-=======
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.175" />
->>>>>>> 778bd7c7b6b68f97ea41b97bc6f4add81508887e
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/drawable/gradient.xml" value="0.175" />
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/drawable/gradient_3.xml" value="0.175" />
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/drawable/gradient_4.xml" value="0.175" />
@@ -25,33 +19,23 @@
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/drawable/toolbar_bg_shape.xml" value="0.175" />
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_focus_mode.xml" value="0.24375" />
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_forgot_password.xml" value="0.24375" />
-<<<<<<< HEAD
+        <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_helpand_feedback.xml" value="0.2" />
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_landing_page.xml" value="0.2" />
-=======
-        <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_landing_page.xml" value="0.264" />
-<<<<<<< HEAD
->>>>>>> 7c54acac37c47ff42bd72b27c05bf88defd9a6d9
-=======
->>>>>>> ce144953a1badec65a89a60d4a00f6b27db42ddd
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_levels_page.xml" value="0.24375" />
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_login.xml" value="0.24375" />
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_login_register.xml" value="0.24375" />
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_main.xml" value="0.24375" />
+        <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_setting.xml" value="0.2" />
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_standard_mode.xml" value="0.24375" />
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/activity_zen_player.xml" value="0.24375" />
+        <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/layout/header_sidemenu.xml" value="0.2" />
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/menu/sidemenu.xml" value="0.24375" />
         <entry key="..\:/RESOURCES/PBLL/Cogitate/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.175" />
->>>>>>> 778bd7c7b6b68f97ea41b97bc6f4add81508887e
         <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/LoginLogin/app/src/main/res/layout/activity_landing_page.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/LoginLogin/app/src/main/res/layout/activity_login.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/LoginLogin/app/src/main/res/layout/activity_login_register.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/HP/OneDrive/Desktop/TY/S2/PBL/LoginLogin/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
-        <entry key="..\:/Users/RAJ/Desktop/PBLL/Cogitate/app/src/main/res/layout/activity_contact_us.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/RAJ/Desktop/PBLL/Cogitate/app/src/main/res/layout/activity_helpand_feedback.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RAJ/Desktop/PBLL/Cogitate/app/src/main/res/layout/activity_landing_page.xml" value="0.264" />
-        <entry key="..\:/Users/RAJ/Desktop/PBLL/Cogitate/app/src/main/res/layout/activity_login.xml" value="0.24270833333333333" />
-        <entry key="..\:/Users/RAJ/Desktop/PBLL/Cogitate/app/src/main/res/layout/activity_login_register.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/RAJ/Desktop/PBLL/Cogitate/app/src/main/res/layout/activity_setting.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RAJ/Desktop/PBLL/Cogitate/app/src/main/res/layout/header_sidemenu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RAJ/Desktop/PBLL/Cogitate/app/src/main/res/menu/sidemenu.xml" value="0.25416666666666665" />
       </map>

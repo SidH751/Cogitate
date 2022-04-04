@@ -10,9 +10,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.my.cogitateapp.R;
-
 public class LandingPage extends AppCompatActivity {
 
     Button firstRegisterBtn;
@@ -27,7 +24,7 @@ public class LandingPage extends AppCompatActivity {
         SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_register);
+        setContentView(R.layout.activity_landing_page);
 
         firstLoginBtn = findViewById(R.id.loginFirstScreen);
         firstRegisterBtn = findViewById(R.id.registerFirstScreen);
