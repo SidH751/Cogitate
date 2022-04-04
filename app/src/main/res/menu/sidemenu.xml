@@ -3,8 +3,10 @@
     <group android:checkableBehavior="single">
         <item android:id="@+id/setting"
             android:icon="@drawable/ic_baseline_settings_24"
+
             android:title="Setting"/>
         <item android:id="@+id/contactus"
+
             android:icon="@drawable/ic_baseline_account_circle_24"
             android:title="Contact Us"/>
         <item android:id="@+id/helpandfeedback"

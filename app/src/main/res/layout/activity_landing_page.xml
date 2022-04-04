@@ -7,8 +7,9 @@
     android:layout_height="match_parent"
     tools:context="com.my.cogitateapp.Dashboard"
     android:id="@+id/drawerlayout"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    tools:openDrawer="start"
+    android:background="#302566">
+
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
@@ -38,17 +39,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150sp"
-            android:background="@drawable/gradient_4"
-            android:theme="@style/ThemeOverlay.Material3.AutoCompleteTextView"
-            app:title="Cogitate"
-            app:titleMarginStart="60sp"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.Toolbar
 
-            />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/toolbar_bg_shape"
+                app:title="Cogitate"
+                app:titleMarginStart="60dp"
+                android:elevation="0.5dp">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <ImageView
+
+                android:id="@+id/top_bg_img"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_top_bg_art"/>
+
+        </RelativeLayout>
 
 
 
@@ -59,23 +77,30 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp">
+
         <TextView
+            android:textColor="@color/white"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="Welcome, User"
             android:textStyle="bold"
             android:textSize="24sp"/>
         <TextView
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Have a Good day ahead!"/>
 
+
         <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="#00FFFFFF"
+            app:cardPreventCornerOverlap="true"
             android:id="@+id/newSessionCard"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             app:cardCornerRadius="16dp"
             android:layout_marginTop="20dp"
+
             app:cardElevation="0dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
@@ -119,6 +144,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="#00FFFFFF"
             android:id="@+id/focusModeCard"
             android:layout_width="match_parent"
             android:layout_height="100dp"
@@ -167,6 +193,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="#00FFFFFF"
             android:id="@+id/zenPlayerCard"
             android:layout_width="match_parent"
             android:layout_height="100dp"
@@ -215,6 +242,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="#00FFFFFF"
             android:clickable="true"
             android:id="@+id/levelsCard"
             android:layout_width="match_parent"

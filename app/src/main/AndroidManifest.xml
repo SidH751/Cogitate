@@ -43,7 +43,8 @@
             android:exported="false" />
         <activity
             android:name=".Dashboard"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/DashBoardUI"/>
         <activity
             android:name=".LandingPage"
             android:exported="true"
