@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.my.cogitateapp.R;
 
 public class LandingPage extends AppCompatActivity {
@@ -58,7 +59,12 @@ public class LandingPage extends AppCompatActivity {
                 return false;
             }
         });
+
+
+
     }
+
+
 
     private void showContentAfterSomeTime() {
         new Handler().postDelayed(() -> showContent = true, 1500);
