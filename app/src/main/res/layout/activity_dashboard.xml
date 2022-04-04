@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.my.cogitateapp.Dashboard"
+    tools:context="com.my.cogitateapp.inerfaces.Dashboard"
     android:id="@+id/drawerlayout"
     tools:openDrawer="start"
     android:background="#302566">

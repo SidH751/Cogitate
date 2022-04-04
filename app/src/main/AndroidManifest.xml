@@ -12,41 +12,41 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginLogin">
         <activity
-            android:name=".HelpandFeedback"
+            android:name=".inerfaces.HelpandFeedback"
             android:exported="false" />
         <activity
-            android:name=".Contact_us"
+            android:name=".inerfaces.Contact_us"
             android:exported="false" />
         <activity
-            android:name=".setting_activity"
+            android:name=".inerfaces.setting_activity"
             android:exported="false" />
         <activity
-            android:name=".LevelsPage"
+            android:name=".inerfaces.LevelsPage"
             android:exported="false" />
         <activity
-            android:name=".ZenPlayer"
+            android:name=".inerfaces.ZenPlayer"
             android:exported="false" />
         <activity
-            android:name=".FocusMode"
+            android:name=".inerfaces.FocusMode"
             android:exported="false" />
         <activity
-            android:name=".StandardMode"
+            android:name=".inerfaces.StandardMode"
             android:exported="false" />
         <activity
-            android:name=".ForgotPassword"
+            android:name=".authenticator.ForgotPassword"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".authenticator.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".authenticator.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".Dashboard"
+            android:name=".inerfaces.Dashboard"
             android:exported="false"
             android:theme="@style/DashBoardUI"/>
         <activity
-            android:name=".LandingPage"
+            android:name=".inerfaces.LandingPage"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
             <intent-filter>
