@@ -100,11 +100,6 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                 break;
             case R.id.logout:
                 mAuth.signOut();
-                SharedPreferences pref=getSharedPreferences("loginPref", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor= pref.edit();
-                editor.clear();
-                editor.apply();
-                editor.commit();
                 Intent intent2=new Intent(Dashboard.this,LandingPage.class);
                 startActivity(intent2);
                 Toast.makeText(getApplicationContext(), "Log Out Succefull!!", Toast.LENGTH_LONG).show();
