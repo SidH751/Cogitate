@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginLogin">
         <activity
+            android:name=".HelpandFeedback"
+            android:exported="false" />
+        <activity
+            android:name=".Contact_us"
+            android:exported="false" />
+        <activity
+            android:name=".setting_activity"
+            android:exported="false" />
+        <activity
             android:name=".LevelsPage"
             android:exported="false" />
         <activity

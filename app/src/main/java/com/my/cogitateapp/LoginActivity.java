@@ -2,6 +2,7 @@ package com.my.cogitateapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -14,12 +15,14 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
     EditText emailTextView, passwordTextView;
     TextView forgotPass;
     Button loginButton;
     FirebaseAuth mAuth;
+    FirebaseUser curAuth;
     TextInputLayout l1, l2;
     Intent i;
 
@@ -46,7 +49,14 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
+
+
+
+
     }
+
 
 
 
