@@ -304,9 +304,9 @@
     </LinearLayout>
     </ScrollView>
 
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
 
+<!--</androidx.drawerlayout.widget.DrawerLayout>-->
+<!--=======-->
 </androidx.drawerlayout.widget.DrawerLayout>
-=======
-</androidx.drawerlayout.widget.DrawerLayout>
->>>>>>> master
+<!--&gt;>>>>>> master-->
