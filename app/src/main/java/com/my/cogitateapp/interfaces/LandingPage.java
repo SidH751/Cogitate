@@ -1,4 +1,4 @@
-package com.my.cogitateapp.inerfaces;
+package com.my.cogitateapp.interfaces;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -13,6 +13,7 @@ import com.my.cogitateapp.R;
 
 public class ForgotPassword extends AppCompatActivity {
 
+
     Button submitForgot;
     EditText emailForgot;
     FirebaseAuth mAuth;

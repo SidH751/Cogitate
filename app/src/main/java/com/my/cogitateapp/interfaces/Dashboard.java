@@ -1,4 +1,4 @@
-package com.my.cogitateapp.inerfaces;
+package com.my.cogitateapp.interfaces;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -55,27 +55,17 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
             startActivity(intent);}
         );
 
-
-
-
-
         drawerLayout=findViewById(R.id.drawerlayout);
         navigationView= findViewById(R.id.navigationmenu);
         toolbar=findViewById(R.id.toolbar);
-
         setSupportActionBar(toolbar);
-
         navigationView.bringToFront();
-
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
-
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-
         mAuth=FirebaseAuth.getInstance();
         navigationView.setNavigationItemSelectedListener(this);
-
 
     }
 
@@ -101,7 +91,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                 mAuth.signOut();
                 Intent intent2=new Intent(Dashboard.this, LandingPage.class);
                 startActivity(intent2);
-                Toast.makeText(getApplicationContext(), "Log Out Succefull!!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Log Out Successful!!", Toast.LENGTH_LONG).show();
                 break;
             case R.id.helpandfeedback:
                 Intent intent3=new Intent(Dashboard.this, HelpandFeedback.class);

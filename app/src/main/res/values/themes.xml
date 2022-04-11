@@ -35,7 +35,7 @@
 
     <style name="DashBoardUI" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">#302566</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:statusBarColor">#7461BA</item>
 
 
