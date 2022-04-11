@@ -1,4 +1,4 @@
-package com.my.cogitateapp.inerfaces;
+package com.my.cogitateapp.interfaces;
 
 import androidx.appcompat.app.AppCompatActivity;
 

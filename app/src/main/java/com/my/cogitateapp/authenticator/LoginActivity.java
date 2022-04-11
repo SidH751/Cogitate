@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.my.cogitateapp.inerfaces.Dashboard;
+import com.my.cogitateapp.interfaces.Dashboard;
 import com.my.cogitateapp.R;
 
 public class LoginActivity extends AppCompatActivity {
