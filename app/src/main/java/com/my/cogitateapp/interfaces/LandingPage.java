@@ -35,9 +35,7 @@ public class LandingPage extends AppCompatActivity {
     Button firstLoginBtn;
     boolean showContent = false;
 
-    GoogleSignInClient mGoogleSignInClient;
-    SignInButton googleSignIn;
-    private static int RC_SIGN_IN = 100;
+
 
 
     FirebaseUser currentuser;
@@ -52,22 +50,9 @@ public class LandingPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
       
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
 
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
 
-        googleSignIn = findViewById(R.id.sign_in_button);
-
-        googleSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                signIn();
-            }
-        });
 
 
         firstLoginBtn = findViewById(R.id.loginFirstScreen);
@@ -86,6 +71,8 @@ public class LandingPage extends AppCompatActivity {
                 (p) -> {
                     Intent intent = new Intent(LandingPage.this, LoginActivity.class);
                     startActivity(intent);
+                }
+        );
 
 
         final View content = findViewById(android.R.id.content);
@@ -118,55 +105,14 @@ public class LandingPage extends AppCompatActivity {
     }
 
 
-    private void showContentAfterSomeTime() {
+
+
+    private void showContentAfterSomeTime(){
         new Handler().postDelayed(() -> showContent = true, 1500);
     }
 
-    private void signIn() {
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent,RC_SIGN_IN);
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
-        if (requestCode == RC_SIGN_IN) {
-            // The Task returned from this call is always completed, no need to attach
-            // a listener.
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            handleSignInResult(task);
-        }
-    }
-
-    private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
-        try {
-            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
-
-            GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
-            if (acct != null) {
-                String personName = acct.getDisplayName();
-                String personGivenName = acct.getGivenName();
-                String personFamilyName = acct.getFamilyName();
-                String personEmail = acct.getEmail();
-                String personId = acct.getId();
-                Uri personPhoto = acct.getPhotoUrl();
-
-                Toast.makeText(this,"User email: "+personEmail,Toast.LENGTH_LONG).show();
-
-            }
-            startActivity(new Intent(LandingPage.this,Dashboard.class));
 
 
 
-        } catch (ApiException e) {
-            // The ApiException status code indicates the detailed failure reason.
-            // Please refer to the GoogleSignInStatusCodes class reference for more information.
-
-            Log.d("Message", e.toString());
-
-        }
 
     }
-}

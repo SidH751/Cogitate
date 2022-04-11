@@ -29,14 +29,14 @@ import com.my.cogitateapp.R;
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     CardView newSession, focusMode, levels, zenPlayer;
 
-    Button signOutButton;
+
 
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
 
-    GoogleSignInClient mGoogleSignInClient;
+
 
 
     FirebaseAuth mAuth;
@@ -50,19 +50,9 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         levels = findViewById(R.id.levelsCard);
         zenPlayer = findViewById(R.id.zenPlayerCard);
 
-        signOutButton=findViewById(R.id.SignOut);
 
-        GoogleSignInOptions gso=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-        mGoogleSignInClient= GoogleSignIn.getClient(this,gso);
 
-        signOutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                signOut();
-            }
-        });
+
 
 
 
@@ -136,16 +126,6 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         return true;
     }
 
-    private void signOut() {
-        mGoogleSignInClient.signOut()
-                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        // ...
-                        Toast.makeText(Dashboard.this,"User signed out",Toast.LENGTH_LONG).show();
-                        finish();
-                    }
-                });
-    }
+
 
 }
