@@ -1,6 +1,7 @@
 package com.my.cogitateapp.interfaces;
 
 import android.content.Intent;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,6 +22,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.my.cogitateapp.R;
@@ -32,9 +34,11 @@ public class LandingPage extends AppCompatActivity {
     Button firstRegisterBtn;
     Button firstLoginBtn;
     boolean showContent = false;
+
     GoogleSignInClient mGoogleSignInClient;
     SignInButton googleSignIn;
     private static int RC_SIGN_IN = 100;
+
 
     FirebaseUser currentuser;
     FirebaseAuth mAuth;
@@ -47,7 +51,7 @@ public class LandingPage extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
-
+      
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -82,14 +86,15 @@ public class LandingPage extends AppCompatActivity {
                 (p) -> {
                     Intent intent = new Intent(LandingPage.this, LoginActivity.class);
                     startActivity(intent);
-                }
-        );
+
 
         final View content = findViewById(android.R.id.content);
         content.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
             @Override
             public boolean onPreDraw() {
+
                 if (showContent) {
+
                     content.getViewTreeObserver().removeOnPreDrawListener(this);
                 }
                 showContentAfterSomeTime();
@@ -98,13 +103,16 @@ public class LandingPage extends AppCompatActivity {
         });
 
 
+
         mAuth = FirebaseAuth.getInstance();
         currentuser = mAuth.getCurrentUser();
         if (currentuser != null) {
             Intent i = new Intent(LandingPage.this, Dashboard.class);
+
             startActivity(i);
             this.finish();
         }
+
 
 
     }
@@ -159,5 +167,6 @@ public class LandingPage extends AppCompatActivity {
             Log.d("Message", e.toString());
 
         }
+
     }
 }

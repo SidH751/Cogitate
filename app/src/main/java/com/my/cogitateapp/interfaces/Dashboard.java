@@ -11,6 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -20,18 +21,23 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.my.cogitateapp.R;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     CardView newSession, focusMode, levels, zenPlayer;
+
     Button signOutButton;
+
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+
     GoogleSignInClient mGoogleSignInClient;
+
 
     FirebaseAuth mAuth;
 
@@ -43,6 +49,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         focusMode = findViewById(R.id.focusModeCard);
         levels = findViewById(R.id.levelsCard);
         zenPlayer = findViewById(R.id.zenPlayerCard);
+
         signOutButton=findViewById(R.id.SignOut);
 
         GoogleSignInOptions gso=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -93,7 +100,6 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
     }
 
-
     @Override
     public void onBackPressed() {
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
@@ -129,6 +135,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         }
         return true;
     }
+
     private void signOut() {
         mGoogleSignInClient.signOut()
                 .addOnCompleteListener(this, new OnCompleteListener<Void>() {
@@ -140,4 +147,5 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                     }
                 });
     }
+
 }
