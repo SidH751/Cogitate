@@ -78,13 +78,6 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SignOut"
-            android:id="@+id/SignOut"
-            />
-
         <TextView
             android:textColor="@color/white"
             android:layout_height="wrap_content"
@@ -304,11 +297,4 @@
     </LinearLayout>
     </ScrollView>
 
-
-<!--<<<<<<< HEAD-->
-
-<!--</androidx.drawerlayout.widget.DrawerLayout>-->
-<!--=======-->
 </androidx.drawerlayout.widget.DrawerLayout>
-<!--&gt;>>>>>> master-->
-
