@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context="com.my.cogitateapp.interfaces.Dashboard"
     android:id="@+id/drawerlayout"
-    tools:openDra+-wer="start"
+
     android:background="#302566">
 
     <com.google.android.material.navigation.NavigationView
@@ -59,9 +59,9 @@
                 android:background="#00000000"
                 app:title=" "
                 app:titleMarginStart="60dp"
-                android:elevation="0.5dp"
-                app:navigationIcon="@drawable/ic_levelvecc">
+                android:elevation="0.5dp">
             </androidx.appcompat.widget.Toolbar>
+
             <ImageView
                 android:id="@+id/top_bg_img"
                 android:layout_width="match_parent"
