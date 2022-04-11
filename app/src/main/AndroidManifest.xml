@@ -44,7 +44,7 @@
         <activity
             android:name=".interfaces.Dashboard"
             android:exported="false"
-            android:theme="@style/DashBoardUI"/>
+            android:theme="@style/DashBoardUI" />
         <activity
             android:name=".interfaces.LandingPage"
             android:exported="true"
