@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
@@ -50,7 +52,7 @@ public class ZenPlayer extends AppCompatActivity {
         btnPrevious = (Button) findViewById(R.id.BtnPrevious);
         btnFastForward = (Button) findViewById(R.id.BtnFastForward);
         btnFastBackWard = (Button) findViewById(R.id.BtnFastRewind);
-        
+
 
         txtSongName = (TextView) findViewById(R.id.SongTxt);
         txtSongStart = (TextView) findViewById(R.id.TxtSongStart);
@@ -63,6 +65,19 @@ public class ZenPlayer extends AppCompatActivity {
             mediaPlayer.start();
             mediaPlayer.release();
         }
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+
+        mySongs = (ArrayList) bundle.getIntegerArrayList("songs");
+        String sName = intent.getStringExtra("songname");
+        position = bundle.getInt("pos");
+        txtSongName.setSelected(true);
+
+        Uri uri = Uri.parse(mySongs.get(position).toString());
+        songName = mySongs.get(position).getName();
+        txtSongName.setText(songName);
+
+        mediaPlayer = MediaPlayer.create(getApplicationContext(), uri);
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
