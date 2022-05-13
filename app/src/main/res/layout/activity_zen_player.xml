@@ -99,7 +99,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/pause_song_icon" />
+                android:background="@drawable/play_song_icon" />
 
             <Button
                 android:id="@+id/BtnNext"
