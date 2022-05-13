@@ -184,6 +184,32 @@ public class ZenPlayer extends AppCompatActivity {
             }
         }, delay);
 
+        btnFastForward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mediaPlayer.isPlaying()) {
+
+                    //Getting the current position and adding 10sec to it
+                    mediaPlayer.seekTo(mediaPlayer.getCurrentPosition() + 10000);
+
+                }
+            }
+        });
+
+
+        //Implementing the FastBackWard
+        btnFastBackWard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mediaPlayer.isPlaying()) {
+
+                    //Getting the curent Position of the song and decrease 10sec from it
+                    mediaPlayer.seekTo(mediaPlayer.getCurrentPosition() - 10000);
+
+                }
+            }
+        });
+
 
 
 
