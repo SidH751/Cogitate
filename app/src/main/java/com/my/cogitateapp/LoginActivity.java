@@ -1,4 +1,4 @@
-package com.my.cogitateapp.authenticator;
+package com.my.cogitateapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,8 +17,6 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.my.cogitateapp.interfaces.Dashboard;
-import com.my.cogitateapp.R;
 
 public class LoginActivity extends AppCompatActivity {
     EditText emailTextView, passwordTextView;
@@ -69,14 +67,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
-
-
     }
-
-
-
 
     void loginUserAccount() {
         l1 = findViewById(R.id.emaillayout);
@@ -115,16 +106,13 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     });
         }
-        if (rememberMe.isChecked())
-        {
+        if (rememberMe.isChecked()) {
             loginPrefEditor.putBoolean("remember",true);
             loginPrefEditor.putString("email",emailString);
             loginPrefEditor.putString("password",passwordString);
             loginPrefEditor.commit();
 
-        }
-        else
-        {
+        } else {
             loginPrefEditor.clear();
             loginPrefEditor.commit();
         }
