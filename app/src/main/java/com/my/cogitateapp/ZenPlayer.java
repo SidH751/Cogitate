@@ -2,6 +2,7 @@ package com.my.cogitateapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
@@ -44,10 +45,12 @@ public class ZenPlayer extends AppCompatActivity {
     Thread updateSeekBar;
     private Object view;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zen_player);
+
         btnPlay = (Button) findViewById(R.id.BtnPlay);
         btnNext = (Button) findViewById(R.id.BtnNext);
         btnPrevious = (Button) findViewById(R.id.BtnPrevious);
@@ -247,5 +250,6 @@ public class ZenPlayer extends AppCompatActivity {
         String endTime = createDuration(mediaPlayer.getDuration());
         txtSongEnd.setText(endTime);
     }
+
 
 }

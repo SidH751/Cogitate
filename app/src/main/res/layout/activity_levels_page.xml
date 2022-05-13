@@ -9,14 +9,34 @@
     android:layout_gravity="center"
     android:gravity="center">
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24dp"
         android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="@color/BtnPrimary"
-        android:text="Uh-huh, The Levels Page is still in Development"
+
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/BtnPrimary"
+        android:textSize="24dp"
+        android:textStyle="bold"
+
+        />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/BtnPrimary"
         />
 
 </LinearLayout>

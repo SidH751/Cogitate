@@ -68,13 +68,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
-
-
     }
-
-
-
 
     void loginUserAccount() {
         l1 = findViewById(R.id.emaillayout);
@@ -113,16 +107,17 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     });
         }
-        if (rememberMe.isChecked())
-        {
+
+        if (rememberMe.isChecked()) {
+
             loginPrefEditor.putBoolean("remember",true);
             loginPrefEditor.putString("email",emailString);
             loginPrefEditor.putString("password",passwordString);
             loginPrefEditor.commit();
 
-        }
-        else
-        {
+
+        } else {
+
             loginPrefEditor.clear();
             loginPrefEditor.commit();
         }
