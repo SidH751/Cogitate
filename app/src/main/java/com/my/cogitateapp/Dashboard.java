@@ -1,4 +1,4 @@
-package com.my.cogitateapp.interfaces;
+package com.my.cogitateapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.my.cogitateapp.R;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     CardView newSession, focusMode, levels, zenPlayer;
