@@ -10,6 +10,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
@@ -22,7 +23,9 @@ import android.widget.TextView;
 import com.my.cogitateapp.R;
 
 import java.io.File;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class ZenPlayer extends AppCompatActivity {
@@ -30,6 +33,7 @@ public class ZenPlayer extends AppCompatActivity {
     TextView txtSongName, txtSongStart, txtSongEnd;
     SeekBar seekMusicBar;
     ImageView imageView;
+//    int Songs[]={R.raw.forestlullaby,R.raw.mindfulnessrelaxationmeditation22174,R.raw.underwaterformeditationbyob14278};
 
 
 
@@ -40,7 +44,8 @@ public class ZenPlayer extends AppCompatActivity {
     static MediaPlayer mediaPlayer;
     int position;
 
-    ArrayList<File> mySongs;
+    ArrayList<Integer> mySongs;
+    ArrayList<Integer> mArraylist;
 
     Thread updateSeekBar;
     private Object view;
@@ -57,6 +62,8 @@ public class ZenPlayer extends AppCompatActivity {
         btnFastForward = (Button) findViewById(R.id.BtnFastForward);
         btnFastBackWard = (Button) findViewById(R.id.BtnFastRewind);
         seekMusicBar = (SeekBar) findViewById(R.id.SeekBar);
+        mArraylist=new ArrayList<Integer>();
+        mySongs=new ArrayList<Integer>();
 
 
         txtSongName = (TextView) findViewById(R.id.SongTxt);
@@ -72,6 +79,18 @@ public class ZenPlayer extends AppCompatActivity {
         }
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
+        mySongs.add(R.raw.forestlullaby);
+        mySongs.add(R.raw.mindfulnessrelaxationmeditation22174);
+        mySongs.add(R.raw.underwaterformeditationbyob14278);
+
+
+        Uri uri = Uri.parse(mySongs.get(0).toString());
+        position=0;
+
+
+
+
+
 
 
 //        mySongs = (ArrayList) bundle.getIntegerArrayList("songs");
@@ -79,11 +98,12 @@ public class ZenPlayer extends AppCompatActivity {
 //        position = bundle.getInt("pos");
 //        txtSongName.setSelected(true);
 
-//        Uri uri = Uri.parse(mySongs.get(position).toString());
+//        Uri uri = Uri.parse(Songs.get(position).toString());
 //        songName = mySongs.get(position).getName();
 //        txtSongName.setText(songName);
 
-        mediaPlayer=MediaPlayer.create(this,R.raw.forestlullaby);
+        mediaPlayer=MediaPlayer.create(this,mySongs.get(position%mySongs.size()));
+//        mediaPlayer.start();
         songEndTime();
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -211,6 +231,83 @@ public class ZenPlayer extends AppCompatActivity {
 
                 }
             }
+        });
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //Stoping the currently playing media
+                mediaPlayer.stop();
+                mediaPlayer.release();
+
+
+                //Getting the Current media position and incrementing it by 1
+//                position = ((position + 1) % mySongs.size());
+
+                //Extracting the media path form the array List
+                position=(position+1)%mySongs.size();
+//                Uri uri1 = Uri.parse(mySongs.get(position).toString());
+
+
+                //Setting the path to the media player
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), mySongs.get(position));
+
+
+                //Getting the current song Name and setting it to TextView
+//                songName = mySongs.get(position).getName();
+//                txtSongName.setText(songName);
+
+                //Starting the Media Player
+                mediaPlayer.start();
+
+                //Extracting the duration of the song
+                songEndTime();
+
+
+                //Animating the ImageView
+                startAnimation(imageView, 360f);
+//                position++;
+
+
+
+
+            }
+        });
+
+        btnPrevious.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                //Stoping the media Player
+                mediaPlayer.stop();
+                mediaPlayer.release();
+
+
+                //getting the  current media position and decrementing it by one
+                position = ((position - 1) % mySongs.size());
+                if (position < 0)
+                    position = mySongs.size() - 1;
+
+                //Extracting the media path
+                Uri uri1 = Uri.parse(mySongs.get(position).toString());
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), mySongs.get(position));
+
+                //Setting the media path to the media player
+//                mediaPlayer = MediaPlayer.create(getApplicationContext(), uri1);
+//                songName = mySongs.get(position).getName();
+//                txtSongName.setText(songName);
+                mediaPlayer.start();
+                songEndTime();
+
+
+                //Animating the imageView
+                startAnimation(imageView, -360f);
+
+
+            }
+
         });
 
 
