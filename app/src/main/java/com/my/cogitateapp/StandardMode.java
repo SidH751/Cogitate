@@ -1,4 +1,4 @@
-package com.my.cogitateapp.interfaces;
+package com.my.cogitateapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.my.cogitateapp.R;
 
-public class HelpandFeedback extends AppCompatActivity {
+public class StandardMode extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_helpand_feedback);
+        setContentView(R.layout.activity_standard_mode);
     }
 }

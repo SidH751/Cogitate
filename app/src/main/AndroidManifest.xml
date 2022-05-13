@@ -12,41 +12,41 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginLogin">
         <activity
-            android:name=".interfaces.HelpandFeedback"
+            android:name=".HelpandFeedback"
             android:exported="false" />
         <activity
-            android:name=".interfaces.Contact_us"
+            android:name=".Contact_us"
             android:exported="false" />
         <activity
-            android:name=".interfaces.setting_activity"
+            android:name=".setting_activity"
             android:exported="false" />
         <activity
-            android:name=".interfaces.LevelsPage"
+            android:name=".LevelsPage"
             android:exported="false" />
         <activity
-            android:name=".interfaces.ZenPlayer"
+            android:name=".ZenPlayer"
             android:exported="false" />
         <activity
-            android:name=".interfaces.FocusMode"
+            android:name=".FocusMode"
             android:exported="false" />
         <activity
-            android:name=".interfaces.StandardMode"
+            android:name=".StandardMode"
             android:exported="false" />
         <activity
-            android:name=".authenticator.ForgotPassword"
+            android:name=".ForgotPassword"
             android:exported="false" />
         <activity
-            android:name=".authenticator.LoginActivity"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".authenticator.RegisterActivity"
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".interfaces.Dashboard"
+            android:name=".Dashboard"
             android:exported="false"
             android:theme="@style/DashBoardUI"/>
         <activity
-            android:name=".interfaces.LandingPage"
+            android:name=".LandingPage"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
             <intent-filter>
