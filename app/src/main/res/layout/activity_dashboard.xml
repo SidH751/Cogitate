@@ -10,7 +10,6 @@
 
     android:background="#302566">
 
-
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -25,320 +24,277 @@
         android:fillViewport="true"
         android:overScrollMode="never"
         android:scrollbars="none">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+            android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <androidx.appcompat.widget.Toolbar
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="5dp"
-                android:id="@+id/toolbar"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="#00000000"
-                app:title=" "
-                app:titleMarginStart="60dp"
-                android:elevation="0.5dp">
-            </androidx.appcompat.widget.Toolbar>
+                android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/top_bg_img"
-                android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_top_bg_art" />
-        </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-
-            </com.google.android.material.appbar.AppBarLayout>
-
-
-        <androidx.cardview.widget.CardView
-            app:cardBackgroundColor="#00FFFFFF"
-            app:cardPreventCornerOverlap="true"
-            android:id="@+id/newSessionCard"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:cardCornerRadius="16dp"
-            android:layout_marginTop="20dp"
-
-            app:cardElevation="0dp"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:background="?android:attr/selectableItemBackground"
-            android:focusable="true">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient_4"
-                android:padding="10dp">
-
-
-
-        </RelativeLayout>
-
-
-
-    </LinearLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Welcome, User"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="#00000000"
+                            app:title=" "
+                            app:titleMarginStart="60dp"
+                            android:elevation="0.5dp">
+                        </androidx.appcompat.widget.Toolbar>
+
+                        <ImageView
+                            android:id="@+id/top_bg_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_top_bg_art" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
-                    android:text="Have a Good day ahead!"
-                    android:textColor="@color/white" />
+                    <TextView
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Welcome, User"
+                        android:textStyle="bold"
+                        android:textSize="24sp"/>
+                    <TextView
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Have a Good day ahead!"/>
 
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/newSessionCard"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="20dp"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="#00FFFFFF"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="0dp"
-                    app:cardPreventCornerOverlap="true">
-
-                    <RelativeLayout
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="#00FFFFFF"
+                        app:cardPreventCornerOverlap="true"
+                        android:id="@+id/newSessionCard"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/gradient_4"
-                        android:padding="10dp">
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="16dp"
+                        android:layout_marginTop="20dp"
 
-                        <TextView
-                            android:id="@+id/startC1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            android:text="New Session"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                        app:cardElevation="0dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:focusable="true">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/gradient_4"
+                            android:padding="10dp">
 
-                        <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/startC1"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="4dp"
-                            android:text="Standard sessions for meditation"
-                            android:textColor="#D9FFFFFF" />
+                            <TextView
+                                android:id="@+id/startC1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="New Session"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
 
-                        <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerInParent="true"
-                            android:layout_marginEnd="10dp"
-                            android:src="@drawable/ic_startvecc2" />
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/startC1"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="4dp"
+                                android:text="Standard sessions for meditation"
+                                android:textColor="#D9FFFFFF" />
 
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/ic_startvecc2" />
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/focusModeCard"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="16dp"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="#00FFFFFF"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="0dp">
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
 
-                    <RelativeLayout
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="#00FFFFFF"
+                        android:id="@+id/focusModeCard"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/gradient"
-                        android:padding="10dp">
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="16dp"
+                        android:layout_marginTop="16dp"
+                        app:cardElevation="0dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:focusable="true">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/gradient"
+                            android:padding="10dp">
 
-                        <TextView
-                            android:id="@+id/focusC1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            android:text="Focus Mode"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:textColor="@color/white"
+                                android:id="@+id/focusC1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Focus Mode"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/focusC1"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="4dp"
-                            android:text="Meditate with zero interruptions!"
-                            android:textColor="#D9FFFFFF" />
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/focusC1"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="4dp"
+                                android:text="Meditate with zero interruptions!"
+                                android:textColor="#D9FFFFFF" />
 
-                        <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerInParent="true"
-                            android:layout_marginEnd="10dp"
-                            android:src="@drawable/ic_focvecc2" />
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/ic_focvecc2" />
 
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/zenPlayerCard"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="16dp"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="#00FFFFFF"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="0dp">
-
-                    <RelativeLayout
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="#00FFFFFF"
+                        android:id="@+id/zenPlayerCard"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/gradient_2"
-                        android:padding="10dp">
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="16dp"
+                        android:layout_marginTop="16dp"
+                        app:cardElevation="0dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:focusable="true"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/gradient_2"
+                            android:padding="10dp">
 
-                        <TextView
-                            android:id="@+id/zenC1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            android:text="Zen Player"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:textColor="@color/white"
+                                android:id="@+id/zenC1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Zen Player"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/zenC1"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="4dp"
-                            android:text="Listen to curated music from Cogitate."
-                            android:textColor="#D9FFFFFF" />
+                            <TextView
+                                android:textColor="#D9FFFFFF"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/zenC1"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="4dp"
+                                android:text="Listen to curated music from Cogitate." />
 
-                        <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerInParent="true"
-                            android:layout_marginEnd="10dp"
-                            android:src="@drawable/ic_zenvecc" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/ic_zenvecc" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/levelsCard"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="#00FFFFFF"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="0dp">
-
-                    <RelativeLayout
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="#00FFFFFF"
+                        android:clickable="true"
+                        android:id="@+id/levelsCard"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/gradient_3"
-                        android:padding="10dp">
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="20dp"
+                        app:cardElevation="0dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:focusable="true"
+                        >
 
-                        <TextView
-                            android:id="@+id/levelsC1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            android:text="Levels"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/gradient_3"
+                            android:padding="10dp">
 
-                        <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/levelsC1"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="4dp"
-                            android:text="Do more with levels!"
-                            android:textColor="#D9FFFFFF" />
+                            <TextView
+                                android:textColor="@color/white"
+                                android:id="@+id/levelsC1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Levels"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
 
-                        <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerInParent="true"
-                            android:layout_marginEnd="10dp"
-                            android:src="@drawable/ic_levelvecc" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:textColor="#D9FFFFFF"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/levelsC1"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="4dp"
+                                android:text="Do more with levels!" />
+
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/ic_levelvecc" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
     </ScrollView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

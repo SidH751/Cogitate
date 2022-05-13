@@ -74,20 +74,6 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.profile,menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id=item.getItemId();
-        if(id==R.id.stat){
-            Toast.makeText(getApplicationContext(),"No Stat Is Here ",Toast.LENGTH_SHORT).show();
-        }return true;
-    }
-
-    @Override
     public void onBackPressed() {
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);

@@ -53,16 +53,19 @@ public class StandardMode extends AppCompatActivity {
             mEditText.setVisibility(View.GONE);
             mButtonSet.setVisibility(View.GONE);
             mButtonStartPause.setVisibility(View.VISIBLE);
+            mTextViewCountDown.setVisibility(View.VISIBLE);
         });
 
         mButtonStartPause.setOnClickListener(p -> {
 
             mButtonStartPause.setText("Resume");
+            mButtonReset.setText("Reset");
             if(mTimerRunning) {
                 pauseTimer();
             } else {
                 startTimer();
             }
+            mButtonReset.setVisibility(View.VISIBLE);
         });
 
         mButtonReset.setOnClickListener(p -> {

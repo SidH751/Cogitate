@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".interfaces.StandardMode"
+    tools:context=".StandardMode"
     android:orientation="vertical"
     android:background="#302566"
 
@@ -18,28 +18,25 @@
         android:layout_alignParentBottom="true">
 
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/view_counter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:text="00:00"
                 android:textColor="@color/white"
                 android:textSize="48sp"
-                tools:visibility="visible"
-                />
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/text_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_marginTop="200sp"
                 android:hint="minutes"
                 android:inputType="number"
@@ -48,17 +45,39 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
-                android:textColorLink="@color/white"/>
+                android:textColorLink="@color/white"
+                android:textSize="24dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+
+
+
+
 
             <Button
 
-                android:elevation="0dp"
+
                 android:id="@+id/button_set"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#3F51B5"
+                android:elevation="0dp"
                 android:padding="14dp"
-                android:text="Set"
-                android:backgroundTint="#12FFFFFF"/>
+                android:text="Set" />
 
 
             <Button
@@ -67,24 +86,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
+                android:backgroundTint="#3F51B5"
+                android:elevation="0dp"
                 android:padding="14dp"
                 android:text="Start"
                 android:visibility="gone"
-                tools:visibility="visible"
-                android:backgroundTint="#12FFFFFF"
-                android:elevation="0dp"/>
+                tools:visibility="visible" />
 
             <Button
-                tools:visibility="visible"
-                android:backgroundTint="#12FFFFFF"
-                android:elevation="0dp"
                 android:id="@+id/button_stop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#3F51B5"
+                android:elevation="0dp"
                 android:padding="14dp"
                 android:text="Stop"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
         </LinearLayout>
+        </RelativeLayout>
 
     </RelativeLayout>
 
