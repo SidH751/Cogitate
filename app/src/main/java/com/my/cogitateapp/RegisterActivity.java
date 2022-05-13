@@ -16,39 +16,38 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
 
     // instance variables
 
-    EditText emailTextView, passwordTextView;
+    EditText emailTextView, passwordTextView,usernameTextView;
     Button registerButton;
     FirebaseAuth mAuth;
-    TextInputLayout l1, l2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        mAuth=FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
        emailTextView = findViewById(R.id.email);
        passwordTextView = findViewById(R.id.password);
        registerButton = findViewById(R.id.registerButton);
+       usernameTextView=findViewById(R.id.username);
 
        registerButton.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
                registerNewUser();
            }
+
+
+
        });
-
-
-
-
-
-
-
-
 
     }
 

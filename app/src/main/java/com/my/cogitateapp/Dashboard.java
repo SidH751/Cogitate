@@ -11,7 +11,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -81,6 +83,20 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.profile,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id=item.getItemId();
+        if(id==R.id.stat){
+            Toast.makeText(getApplicationContext(),"No Stat Is Here ",Toast.LENGTH_SHORT).show();
+        }return true;
+    }
+
+    @Override
     public void onBackPressed() {
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
@@ -94,9 +110,16 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.setting:
+            case R.id.about:
                 Intent intent1=new Intent(Dashboard.this,setting_activity.class);
                 startActivity(intent1);
+                break;
+            case R.id.share:
+                Intent intent=new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_SUBJECT,"Check Out This Cool Applpicatiion");
+                intent.putExtra(Intent.EXTRA_TEXT,"Your Link Is Here");
+                startActivity(Intent.createChooser(intent,"Share Via"));
                 break;
             case R.id.logout:
                 mAuth.signOut();

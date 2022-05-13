@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 public class HelpandFeedback extends AppCompatActivity {
 
     @Override

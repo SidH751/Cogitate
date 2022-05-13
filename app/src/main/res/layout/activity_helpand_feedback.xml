@@ -5,10 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HelpandFeedback"
+    android:orientation="vertical"
     android:gravity="center">
-    <EditText
-        android:layout_width="match_parent"
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/feedbackuser"
+        android:padding="12dp"
+        android:hint="Your Name"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="15dp"
+
+        />
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/feedbackemail"
+        android:padding="12dp"
+        android:hint="Email"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="15dp"
+
+        />
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:id="@+id/feedbacktext"
+        android:padding="12dp"
+        android:hint="Enter Text Here"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="15dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="abe likh na madarchot"
-       />
+        android:id="@+id/submitfeedback"
+        android:text="Submit"
+        android:layout_marginTop="40dp"/>
 </LinearLayout>
