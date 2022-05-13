@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
@@ -52,6 +53,7 @@ public class ZenPlayer extends AppCompatActivity {
         btnPrevious = (Button) findViewById(R.id.BtnPrevious);
         btnFastForward = (Button) findViewById(R.id.BtnFastForward);
         btnFastBackWard = (Button) findViewById(R.id.BtnFastRewind);
+        seekMusicBar = (SeekBar) findViewById(R.id.SeekBar);
 
 
         txtSongName = (TextView) findViewById(R.id.SongTxt);
@@ -68,16 +70,18 @@ public class ZenPlayer extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
-        mySongs = (ArrayList) bundle.getIntegerArrayList("songs");
-        String sName = intent.getStringExtra("songname");
-        position = bundle.getInt("pos");
-        txtSongName.setSelected(true);
 
-        Uri uri = Uri.parse(mySongs.get(position).toString());
-        songName = mySongs.get(position).getName();
-        txtSongName.setText(songName);
+//        mySongs = (ArrayList) bundle.getIntegerArrayList("songs");
+//        String sName = intent.getStringExtra("songname");
+//        position = bundle.getInt("pos");
+//        txtSongName.setSelected(true);
 
-        mediaPlayer = MediaPlayer.create(getApplicationContext(), uri);
+//        Uri uri = Uri.parse(mySongs.get(position).toString());
+//        songName = mySongs.get(position).getName();
+//        txtSongName.setText(songName);
+
+        mediaPlayer=MediaPlayer.create(this,R.raw.forestlullaby);
+        songEndTime();
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,6 +121,71 @@ public class ZenPlayer extends AppCompatActivity {
             }
         });
 
+        updateSeekBar = new Thread() {
+            @Override
+            public void run() {
+
+                int TotalDuration = mediaPlayer.getDuration();
+                int CurrentPosition = 0;
+
+                while (CurrentPosition < TotalDuration) {
+                    try {
+
+                        sleep(500);
+                        CurrentPosition = mediaPlayer.getCurrentPosition();
+                        seekMusicBar.setProgress(CurrentPosition);
+
+                    } catch (InterruptedException | IllegalStateException e) {
+
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+        };
+
+        seekMusicBar.setMax(mediaPlayer.getDuration());
+        updateSeekBar.start();
+
+        seekMusicBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+                //getting the progress of the seek bar and setting it to Media Player
+                mediaPlayer.seekTo(seekBar.getProgress());
+
+            }
+        });
+
+        final Handler handler = new Handler();
+        final int delay = 1000;
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                //Getting the current duration from the media player
+                String currentTime = createDuration(mediaPlayer.getCurrentPosition());
+
+                //Setting the current duration in textView
+                txtSongStart.setText(currentTime);
+                handler.postDelayed(this, delay);
+
+            }
+        }, delay);
+
+
+
 
 
     }
@@ -146,6 +215,11 @@ public class ZenPlayer extends AppCompatActivity {
         time += sec;
         return time;
 
+    }
+
+    public void songEndTime() {
+        String endTime = createDuration(mediaPlayer.getDuration());
+        txtSongEnd.setText(endTime);
     }
 
 }
