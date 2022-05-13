@@ -1,4 +1,4 @@
-package com.my.cogitateapp.authenticator;
+package com.my.cogitateapp;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
-import com.my.cogitateapp.R;
 
 public class ForgotPassword extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.my.cogitateapp.interfaces;
+package com.my.cogitateapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,9 +12,6 @@ import androidx.core.splashscreen.SplashScreen;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.my.cogitateapp.R;
-import com.my.cogitateapp.authenticator.LoginActivity;
-import com.my.cogitateapp.authenticator.RegisterActivity;
 
 public class LandingPage extends AppCompatActivity {
 
@@ -67,7 +64,6 @@ public class LandingPage extends AppCompatActivity {
         });
 
 
-
         mAuth=FirebaseAuth.getInstance();
         currentuser=mAuth.getCurrentUser();
         if(currentuser!=null){
@@ -79,6 +75,7 @@ public class LandingPage extends AppCompatActivity {
 
 
     }
+
 
 
 

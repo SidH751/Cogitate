@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "77046152272",
-    "project_id": "loginlogin-1b9c9",
-    "storage_bucket": "loginlogin-1b9c9.appspot.com"
+    "project_number": "964829435108",
+    "project_id": "mycogitate-e6f51",
+    "storage_bucket": "mycogitate-e6f51.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:77046152272:android:7636bef29b0ff28d502555",
+        "mobilesdk_app_id": "1:964829435108:android:8ccbfb80331976a4fa88f1",
         "android_client_info": {
           "package_name": "com.my.cogitateapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "77046152272-ptgki4neu0jdq3g74fq6ko1t3q39ee73.apps.googleusercontent.com",
+          "client_id": "964829435108-ue8elncj5ccfurepuqi11afrho88g8ar.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB4VNY9q9ExDxtKHL8jKc89nnfE7Md8wo4"
+          "current_key": "AIzaSyCmia-N98-gs4kg8fmVU0IWJvrwRp4zp6Q"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "77046152272-ptgki4neu0jdq3g74fq6ko1t3q39ee73.apps.googleusercontent.com",
+              "client_id": "964829435108-ue8elncj5ccfurepuqi11afrho88g8ar.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
