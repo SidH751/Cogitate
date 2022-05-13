@@ -29,6 +29,7 @@ public class ZenPlayer extends AppCompatActivity {
     TextView txtSongName, txtSongStart, txtSongEnd;
     SeekBar seekMusicBar;
     ImageView imageView;
+    int Songs[]={R.raw.forestlullaby,R.raw.mindfulnessrelaxationmeditation22174,R.raw.underwaterformeditationbyob14278};
 
 
 
@@ -80,7 +81,7 @@ public class ZenPlayer extends AppCompatActivity {
 //        songName = mySongs.get(position).getName();
 //        txtSongName.setText(songName);
 
-        mediaPlayer=MediaPlayer.create(this,R.raw.forestlullaby);
+        mediaPlayer=MediaPlayer.create(this,Songs[0]);
         songEndTime();
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
