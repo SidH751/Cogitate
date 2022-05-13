@@ -63,6 +63,7 @@ public class LandingPage extends AppCompatActivity {
             }
         });
 
+
         mAuth=FirebaseAuth.getInstance();
         currentuser=mAuth.getCurrentUser();
         if(currentuser!=null){
@@ -70,7 +71,13 @@ public class LandingPage extends AppCompatActivity {
             startActivity(i);
             this.finish();
         }
+
+
+
     }
+
+
+
 
     private void showContentAfterSomeTime() {
         new Handler().postDelayed(() -> showContent = true, 1500);

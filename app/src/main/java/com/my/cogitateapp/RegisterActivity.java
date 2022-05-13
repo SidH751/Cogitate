@@ -2,7 +2,9 @@ package com.my.cogitateapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.core.view.ViewCompat;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +19,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,9 +30,11 @@ import com.my.cogitateapp.LoginActivity;
 import com.my.cogitateapp.R;
 import com.my.cogitateapp.User;
 
+
 public class RegisterActivity extends AppCompatActivity {
 
     // instance variables
+
 
     EditText emailTextView, passwordTextView, userNameTextView;
     Button registerButton;
@@ -57,11 +62,13 @@ public class RegisterActivity extends AppCompatActivity {
         user = new User();
 
         registerButton.setOnClickListener(view -> { registerNewUser(); });
+
     }
 
     //Registration method
 
     void registerNewUser(){
+
 
         String emailString, passwordString, userName;
         emailString = emailTextView.getText().toString();
@@ -70,12 +77,14 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         //checking if necessary fields are empty
+
         if(TextUtils.isEmpty(emailString)){
 
             emailTextView.setError("Please enter your Email");
         } else if (TextUtils.isEmpty(passwordString)){
             passwordTextView.setError("Password cannot be Empty");
         } else {
+
 
             // Firebase Registration method
             mAuth.createUserWithEmailAndPassword(emailString, passwordString)

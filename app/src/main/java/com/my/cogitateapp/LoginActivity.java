@@ -67,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
     }
 
     void loginUserAccount() {
@@ -106,13 +107,17 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     });
         }
+
         if (rememberMe.isChecked()) {
+
             loginPrefEditor.putBoolean("remember",true);
             loginPrefEditor.putString("email",emailString);
             loginPrefEditor.putString("password",passwordString);
             loginPrefEditor.commit();
 
+
         } else {
+
             loginPrefEditor.clear();
             loginPrefEditor.commit();
         }

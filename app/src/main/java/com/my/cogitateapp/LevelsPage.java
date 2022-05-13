@@ -1,5 +1,6 @@
 package com.my.cogitateapp;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -49,5 +50,6 @@ public class LevelsPage extends AppCompatActivity {
                         Toast.makeText(LevelsPage.this, "failed", Toast.LENGTH_SHORT).show();
                     }
                 });
+
     }
 }
