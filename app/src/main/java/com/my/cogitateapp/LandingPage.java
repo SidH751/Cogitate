@@ -64,11 +64,10 @@ public class LandingPage extends AppCompatActivity {
         });
 
 
-
         mAuth=FirebaseAuth.getInstance();
         currentuser=mAuth.getCurrentUser();
         if(currentuser!=null){
-            Intent i=new Intent(LandingPage.this,Dashboard.class);
+            Intent i=new Intent(LandingPage.this, Dashboard.class);
             startActivity(i);
             this.finish();
         }
@@ -76,6 +75,7 @@ public class LandingPage extends AppCompatActivity {
 
 
     }
+
 
 
 

@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class ForgotPassword extends AppCompatActivity {
 
+
     Button submitForgot;
     EditText emailForgot;
     FirebaseAuth mAuth;
@@ -29,7 +30,7 @@ public class ForgotPassword extends AppCompatActivity {
         submitForgot = findViewById(R.id.submitForgotButton);
         backLogin=findViewById(R.id.backToLogin);
         backLogin.setOnClickListener(
-                view -> startActivity(new Intent(ForgotPassword.this,LoginActivity.class)));
+                view -> startActivity(new Intent(ForgotPassword.this, LoginActivity.class)));
 
         submitForgot.setOnClickListener(view -> validateData());
     }

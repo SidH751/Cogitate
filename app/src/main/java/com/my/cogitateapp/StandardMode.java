@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.my.cogitateapp.R;
+
 public class StandardMode extends AppCompatActivity {
 
     @Override

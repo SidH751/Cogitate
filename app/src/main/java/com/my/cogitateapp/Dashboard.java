@@ -8,10 +8,11 @@ import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Context;
 import android.content.Intent;
+
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -58,27 +59,17 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
             startActivity(intent);}
         );
 
-
-
-
-
         drawerLayout=findViewById(R.id.drawerlayout);
         navigationView= findViewById(R.id.navigationmenu);
         toolbar=findViewById(R.id.toolbar);
-
         setSupportActionBar(toolbar);
-
         navigationView.bringToFront();
-
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
-
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-
         mAuth=FirebaseAuth.getInstance();
         navigationView.setNavigationItemSelectedListener(this);
-
 
     }
 
@@ -110,8 +101,10 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
+
             case R.id.about:
                 Intent intent1=new Intent(Dashboard.this,setting_activity.class);
+
                 startActivity(intent1);
                 break;
             case R.id.share:
@@ -123,16 +116,16 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                 break;
             case R.id.logout:
                 mAuth.signOut();
-                Intent intent2=new Intent(Dashboard.this,LandingPage.class);
+                Intent intent2=new Intent(Dashboard.this, LandingPage.class);
                 startActivity(intent2);
-                Toast.makeText(getApplicationContext(), "Log Out Succefull!!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Log Out Successful!!", Toast.LENGTH_LONG).show();
                 break;
             case R.id.helpandfeedback:
-                Intent intent3=new Intent(Dashboard.this,HelpandFeedback.class);
+                Intent intent3=new Intent(Dashboard.this, HelpandFeedback.class);
                 startActivity(intent3);
                 break;
             case R.id.contactus:
-                Intent intent4=new Intent(Dashboard.this,Contact_us.class);
+                Intent intent4=new Intent(Dashboard.this, Contact_us.class);
                 startActivity(intent4);
                 break;
         }

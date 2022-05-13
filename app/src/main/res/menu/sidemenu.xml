@@ -8,8 +8,10 @@
         <item android:id="@+id/helpandfeedback"
             android:icon="@drawable/ic_baseline_help_24"
             android:title="Help and Feedback"/>
+
         <item android:id="@+id/about"
             android:icon="@drawable/ic_baseline_help_24"
+
             android:title="About"/>
     </group>
 
